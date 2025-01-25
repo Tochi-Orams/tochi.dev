@@ -2,20 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  h1,
+  .h1Size {
+    @apply lg:text-[3.1rem] md:text-5xl text-4xl font-bold;
+  }
+  h2,
+  .h2Size {
+    @apply md:text-4xl text-3xl font-bold;
+  }
+  h3,
+  .h3Size {
+    @apply lg:text-2xl md:text-xl text-lg font-bold;
+  }
+  h4,
+  .h4Size {
+    @apply md:text-xl text-lg font-bold;
+  }
+  p {
+    @apply md:text-lg text-sm;
+  }
+  a {
+    outline: none;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .special-scroll::-webkit-scrollbar {
+    @apply bg-transparent w-1;
+  }
+  .special-scroll::-webkit-scrollbar-track {
+    background-color: none;
+    @apply h-1/2 !mr-2;
+  }
+  .special-scroll::-webkit-scrollbar-thumb {
+    @apply bg-black/30 rounded-full;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* General */
+  .section-padding {
+    @apply xl:px-40 md:px-28 sm:px-10 px-5 z-10 relative;
+  }
+  .glass {
+    background: linear-gradient();
+    @apply bg-white/30 rounded-3xl backdrop-blur-md;
+  }
+
+  /* About */
+  .bio-section a {
+    @apply font-bold underline z-[200];
+  }
+  .bio_text p {
+    @apply lg:text-lg  xm:text-[1.1rem] xm:leading-6 text-sm;
+  }
+
+  /* Mobile Nav */
+  .bar {
+    @apply bg-white duration-500 ease-in-out h-[2px] mx-auto w-6 rounded-full;
+  }
+  .menu.active .bar:nth-child(2) {
+    @apply md:-translate-x-[470px] xm:-translate-x-[435px] opacity-0 duration-700 ease-in-out;
+  }
+  .menu.active .bar:nth-child(1) {
+    @apply translate-y-[9px] rotate-45;
+  }
+  .menu.active .bar:nth-child(3) {
+    @apply -translate-y-[9px] -rotate-45;
+  }
+
+  /* Projects */
+  .shade {
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 35%,
+      rgba(0, 0, 0, 0) 70%
+    );
+    @apply rounded-b-3xl;
+  }
+  .progress-mobile,
+  .progress-web {
+    @apply w-full h-full bg-white/60 rounded-full ease-linear;
+  }
+
+  /* Contact */
+  form {
+    @apply glass bg-white/30 w-1/2 flex flex-col gap-4 p-8;
+  }
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .textbox {
+    @apply text-black text-lg py-1 px-2 rounded-md glass bg-white/60 w-full focus:border-black/60 border-2 border-transparent;
+  }
+  .select-option {
+    @apply px-2 py-[2px] rounded-md bg-transparent hover:bg-white/30 duration-300 cursor-pointer text-black/50 hover:text-black/100;
+  }
+  .notification {
+    @apply fixed -bottom-16 left-1/2 -translate-x-1/2 glass py-3 px-8 duration-500 pointer-events-none opacity-0 scale-50;
+  }
+  .notification.active {
+    @apply bottom-10 opacity-100 scale-100;
+  }
+
+  /* Project pages */
+  .code-text {
+    color: rgb(90, 181, 218);
+    @apply font-normal text-lg text-nowrap;
+  }
+  .code em {
+    color: rgb(209, 112, 77);
+  }
+  .project-view {
+    @apply cursor-pointer hover:text-white/100 duration-300 pt-1 pb-2 bg-white/15 text-center text-3xl hover:bg-white/30;
+  }
+  code i {
+    @apply !text-white;
+  }
 }
