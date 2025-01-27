@@ -116,7 +116,7 @@ const ContactForm: FC<props> = ({ props }) => {
 
           setName("");
           setEmail("");
-          setTopic("");
+          setTopic("Topic");
           setMessage("");
           setBlurs({ name: false, email: false, message: false });
 

@@ -94,7 +94,7 @@ const ProjectsSection = () => {
 
       <div
         id="all projects"
-        className={`absolute top-0 lg:-translate-y-[100%] left-0 h-full w-full duration-1000 ease-in-out flex flex-col gap-5 pt-28 lg:section-padding px-5 ${
+        className={`absolute lg:top-0 top-14 lg:-translate-y-[100%] left-0 h-full w-full duration-1000 ease-in-out flex flex-col gap-5 pt-28 lg:section-padding px-5 ${
           inDOM ? "block" : "lg:hidden block"
         } ${
           !visible
@@ -110,11 +110,11 @@ const ProjectsSection = () => {
           <p>Featured Projects</p>
         </button>
 
-        <div className="glass lg:p-3 lg:h-[85%] p-10 h-[90%]">
+        <div className="glass lg:p-3 lg:h-[85%] p-4 h-[80%]">
           <h2 className="pb-6 text-center w-fit mx-auto xm:text-4xl text-3xl lg:block hidden">
             All Projects
           </h2>
-          <div className="special-scroll w-full flex justify-center flex-wrap gap-6 overflow-y-scroll py-4 lg:h-[85%] h-full">
+          <div className="special-scroll w-full flex justify-center flex-wrap gap-6 overflow-y-scroll py-4 px-2 lg:h-[85%] h-full">
             {allProjects.map((proj, i) => (
               <Link
                 key={i}

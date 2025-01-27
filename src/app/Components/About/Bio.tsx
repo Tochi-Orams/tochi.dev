@@ -51,7 +51,7 @@ const Bio: FC<bioProps> = ({
           : "translate-x-0 opacity-100 delay-300"
       }`}
     >
-      <div className="absolute h-[78vh] sm:top-8 top-0 right-0 bottom-0 left-0 section-padding bg-transparent pt-24 flex xl:flex-row flex-col items-center justify-around">
+      <div className="absolute h-[70vh] top-12 right-0 bottom-0 left-0 section-padding bg-transparent pt-24 flex xl:flex-row flex-col items-center justify-around">
         <div className="glass h-full xl:w-[75%] w-full lg:py-10 lg:px-16 sm:p-6 p-4 overflow-hidden z-[1500]">
           <div className={`duration-500 ${fade ? "opacity-0" : "opacity-100"}`}>
             {displaySection === 0 ? (
