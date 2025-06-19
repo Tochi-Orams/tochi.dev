@@ -1,6 +1,73 @@
 import { projectParams } from "@/app/Types/Types";
 
 export const projectList: projectParams[] = [
+  // Rosé Picnic
+  {
+    title: "Rosé Picnic",
+    info: {
+      name: ".rosePicnic",
+      type: "freelance contract",
+      role: "lead developer",
+      status: "completed",
+    },
+    tags: [
+      "Typescript",
+      "Next.js",
+      "Node.js",
+      "Tailwind",
+      "Git",
+      "Vercel",
+      "CLIs",
+      "Wordpress",
+      "Google Analytics",
+      "Photoshop",
+    ],
+    summary: (
+      <p>
+        As the lead engineer for the Rosé Picnic platform, I architected and
+        deployed a full-stack exhibitor portal that automated onboarding and
+        coordination for event vendors. Built with Next.js, Node.js, PostgreSQL,
+        and integrated with Google Cloud, the portal allowed vendors to upload
+        required documents, register team members, specify setup requirements,
+        and opt into additional services. I also engineered an internal admin
+        dashboard with advanced filters and real-time payment tracking,
+        significantly improving vendor management workflows.
+        <br />
+        <br />
+        Additionally, I led the complete redesign of the public-facing website,
+        migrating from WordPress to Next.js to boost performance, accessibility,
+        and SEO. These improvements drove a 20% increase in user engagement and
+        an 18% boost in ticket sales. Collaborating with the marketing team, I
+        leveraged Google Analytics to analyze user behavior and shipped
+        data-driven UI enhancements to optimize conversions.
+        <br />
+        <br />
+        To support fast, reliable iteration, I implemented a CI/CD pipeline
+        using GitHub Actions and Vercel for automated testing and zero-downtime
+        deployments. I also developed a modular UI component library,
+        accelerating new feature development by 35% while ensuring brand
+        consistency across the site.
+      </p>
+    ),
+    pictures: [
+      "/Projects/EP1.png",
+      "/Projects/EP2.png",
+      "/Projects/EP3.png",
+      "/Projects/EP4.png",
+      "/Projects/EP5.png",
+      "/Projects/EP6.png",
+      // -----
+      "/Projects/RP1.png",
+      "/Projects/RP2.png",
+      "/Projects/RP3.png",
+      "/Projects/RP4.png",
+      "/Projects/RP5.png",
+      "/Projects/RP6.png",
+      "/Projects/RP7.png",
+    ],
+    link: "https://www.rosepicnic.com/",
+    slug: "rose-picnic",
+  },
   // Toronto Musicians Hub
   {
     title: "Toronto Musicians Hub",
@@ -310,63 +377,6 @@ export const projectList: projectParams[] = [
     pictures: ["/Projects/QR2.png", "/Projects/QR3.png", "/Projects/QR4.png"],
     link: "",
     slug: "tasqr",
-  },
-  // Rosé Picnic
-  {
-    title: "Rosé Picnic",
-    info: {
-      name: ".rosePicnic",
-      type: "freelance contract",
-      role: "lead developer",
-      status: "completed",
-    },
-    tags: [
-      "Typescript",
-      "Next.js",
-      "Node.js",
-      "Tailwind",
-      "Git",
-      "Vercel",
-      "CLIs",
-      "Wordpress",
-      "Google Analytics",
-      "Photoshop",
-    ],
-    summary: (
-      <p>
-        The Rosé Picnic website serves as the digital hub for one of Toronto's
-        popular summer events, providing all the details attendees need to plan
-        their visit while driving ticket sales and fostering partnerships with
-        sponsors, vendors, and volunteers.
-        <br />
-        <br />
-        I led the complete redesign of the site, transitioning it from WordPress
-        to Next.js to improve speed, accessibility, and user experience, and
-        discoverability. This overhaul led to a 20% increase in user engagement
-        and a 18% rise in ticket sales. Working closely with the marketing team,
-        I analyzed user behavior through Google Analytics and implemented
-        data-driven UI updates, optimizing key interactions to maximize
-        conversions and better serve user needs.
-        <br />
-        <br />
-        To ensure seamless development and iteration, I built a CI/CD pipeline
-        with GitHub Actions and Vercel, enabling automated testing and
-        zero-downtime deployments. I also developed a reusable UI component
-        library, which accelerated future development by 35%, keeping the site
-        adaptable to the event's evolving needs.
-      </p>
-    ),
-    pictures: [
-      "/Projects/RP1.png",
-      "/Projects/RP2.png",
-      "/Projects/RP3.png",
-      "/Projects/RP4.png",
-      "/Projects/RP5.png",
-      "/Projects/RP6.png",
-      "/Projects/RP7.png",
-    ],
-    link: "https://www.rosepicnic.com/",
-    slug: "rose-picnic",
   },
   // SickKids
   {

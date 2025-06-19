@@ -1,5 +1,19 @@
 export const webProjects = [
   {
+    title: "Rosé Picnic",
+    description:
+      "The Rosé Picnic Exhibitors Portal features a comprehensive, user-first onboarding experience for vendors, while the Rosé Picnic Site features an attractive UI allowing visitors to learn more about, and buy tickets for the Rosé Picnic, A prominent summertime event in Toronto.",
+    image: "/Projects/EP6.png",
+    link: "/rose-picnic",
+  },
+  {
+    title: "SickKids PICU Follow-Up Clinic",
+    description:
+      "The PICU Follow-up Clinic site provides a user-friendly hub for patients and families of patients to complete prerequisite surveys ahead of follow up appointments.",
+    image: "/Projects/SK1.png",
+    link: "/sickkids-picu-clinic",
+  },
+  {
     title: "Toronto Musicians Hub",
     description:
       "The Toronto Musicians Hub Website introduces Toronto-based musicians to a community focused on uniting musicians through shared goals and innovative events.",
@@ -12,20 +26,6 @@ export const webProjects = [
       "QuantumApps showcases a robust and beautiful web presence for a top Canadian software and marketing agency, boasting an impressive portfolio of past projects.",
     image: "/Projects/QA1.png",
     link: "/quantumapps",
-  },
-  {
-    title: "SickKids PICU Follow-Up Clinic",
-    description:
-      "The PICU Follow-up Clinic site provides a user-friendly hub for patients and families of patients to complete prerequisite surveys ahead of follow up appointments.",
-    image: "/Projects/SK1.png",
-    link: "/sickkids-picu-clinic",
-  },
-  {
-    title: "Rosé Picnic",
-    description:
-      "The Rosé Picnic Site features a bold and attractive user interface allowing visitors to learn more about, and buy tickets for the Rosé Picnic, A prominent summertime event in Toronto.",
-    image: "/Projects/RP1.png",
-    link: "/rose-picnic",
   },
 ];
 

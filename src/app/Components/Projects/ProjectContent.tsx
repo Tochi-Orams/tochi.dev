@@ -70,7 +70,14 @@ const ProjectContent: FC<props> = ({
               : "opacity-100 pointer-events-auto"
           }`}
         >
-          {overview}
+          <div>{overview}</div>
+
+          <button
+            className="bg-white/15 sm:px-4 px-2 py-2 flex gap-3 hover:bg-white/30 cursor-pointer duration-300 text-nowrap rounded-lg group-focus:outline mt-8"
+            onClick={() => setOnGallerySection(true)}
+          >
+            View Project Gallery
+          </button>
         </div>
 
         <div
