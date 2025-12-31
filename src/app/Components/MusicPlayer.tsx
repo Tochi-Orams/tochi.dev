@@ -90,6 +90,12 @@ const MusicPlayer = () => {
           pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
+      case "oru-digital":
+        setProjectInfo({
+          title: "Oru.Digital",
+          pic: `/Projects/Logos/${currentPage}.png`,
+        });
+        break;
       case "tasqr":
         setProjectInfo({
           title: "tasQR",

@@ -2,7 +2,7 @@
 title: "Oru.Digital"
 slug: "oru-digital"
 info:
-  name: ".act-digital"
+  name: ".oru-digital"
   type: "Startup"
   role: "founder && full-stack engineer"
   status: "ongoing"
@@ -26,8 +26,6 @@ pictures:
   - "/Projects/orudigital/8.png"
 link: ""
 ---
-
-### Description
 
 Oru.Digital is an entrepreneurial venture designed to bridge the gap for software engineers from non-traditional backgrounds. The platform acts as a "Senior Engineer in a box," providing the structure, architectural planning, and cohesion necessary to manage complex software projects for individual developers and small teams.
 
