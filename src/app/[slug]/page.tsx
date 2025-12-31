@@ -1,58 +1,33 @@
-import React, { FC } from "react";
-import { projectList } from "../Components/Projects/projectList";
-import ProjectPage from "../Components/Projects/ProjectPage";
+import { redirect } from "next/navigation";
+import { FC } from "react";
 import { slugs } from "../Types/Types";
-
-const getProjects = () => {
-  const projects = projectList.map((project) => {
-    return {
-      title: project.title,
-      info: project.info,
-      tags: project.tags,
-      summary: project.summary,
-      pictures: project.pictures,
-      link: project.link,
-      slug: project.slug,
-    };
-  });
-
-  return projects;
-};
+import { getAllProjectSlugs } from "@/lib/projects";
 
 export async function generateStaticParams() {
-  const projects = getProjects();
+  const slugs = getAllProjectSlugs();
 
-  return projects.map((project) => ({
-    slug: project.slug,
+  return slugs.map((slug) => ({
+    slug: slug,
   }));
 }
-
-const getProjectContents = (slug: string) => {
-  const content = projectList.filter((proj) => {
-    return proj.slug === slug;
-  });
-
-  return content[0];
-};
 
 interface pageParams {
   params?: Promise<{ slug: slugs }>;
 }
 
+/**
+ * Redirect handler for old project URLs
+ * Redirects /{slug} to /projects/{slug}
+ */
 const page: FC<pageParams> = async ({ params }) => {
   if (!params) {
-    // Handle the case where `params` is undefined, e.g., return an error or default content
-    return <main>Invalid route</main>;
+    redirect("/");
   }
 
   const { slug } = await params;
-  const projectContent = getProjectContents(slug);
 
-  return (
-    <main>
-      <ProjectPage props={projectContent} />
-    </main>
-  );
+  // Redirect to new projects route
+  redirect(`/projects/${slug}`);
 };
 
 export default page;

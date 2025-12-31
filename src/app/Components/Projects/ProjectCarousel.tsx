@@ -117,8 +117,10 @@ const ProjectCarousel: FC<props> = ({ projects, sec }) => {
           <img
             src={project.image}
             alt={project.title}
-            className={`h-full w-full -z-10 duration-300 rounded-3xl object-cover ${
+            className={`h-full w-full -z-10 duration-300 rounded-3xl ${
               isPaused ? "opacity-80" : "opacity-40"
+            } ${
+              sec === "mobile" ? "pb-40 pt-10 object-contain" : "object-cover"
             }`}
           />
           <div className="shade z-0 absolute top-0 right-0 h-full w-full" />

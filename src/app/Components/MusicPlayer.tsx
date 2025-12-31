@@ -39,55 +39,61 @@ const MusicPlayer = () => {
       case "quantumapps":
         setProjectInfo({
           title: "QuantumApps",
-          pic: "/Projects/Logos/QA.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       case "techinto":
         setProjectInfo({
           title: "TechinTO",
-          pic: "/Projects/Logos/TO.png",
-        });
-        break;
-      case "little-lemon-reservations":
-        setProjectInfo({
-          title: "Little Lemon",
-          pic: "/Projects/Logos/LL.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       case "toronto-musicians-hub":
         setProjectInfo({
           title: "Toronto Musicians Hub",
-          pic: "/Projects/Logos/TM.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       case "rose-picnic":
         setProjectInfo({
           title: "Rosé Picnic",
-          pic: "/Projects/Logos/RP.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       case "sickkids-picu-clinic":
         setProjectInfo({
           title: "SickKids PICU Clinic",
-          pic: "/Projects/Logos/SK.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       case "pixelpraise":
         setProjectInfo({
           title: "PixelPraise",
-          pic: "/Projects/Logos/PP.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
+        });
+        break;
+      case "act-io":
+        setProjectInfo({
+          title: "Act.IO",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       case "langulife":
         setProjectInfo({
           title: "Langulife",
-          pic: "/Projects/Logos/LA.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
+        });
+        break;
+      case "klub-record":
+        setProjectInfo({
+          title: "Klub Record",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       case "tasqr":
         setProjectInfo({
           title: "tasQR",
-          pic: "/Projects/Logos/QR.png",
+          pic: `/Projects/Logos/${currentPage}.png`,
         });
         break;
       default:
