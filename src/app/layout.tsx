@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
+import { headers } from "next/headers";
 import Providers from "./Context/Providers";
 import MusicPlayer from "./Components/MusicPlayer";
 import Nav from "./Components/Nav";
@@ -26,11 +25,13 @@ export const metadata: Metadata = {
   description: "A collection of Tochi's web and mobile development work",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nonce = (await headers()).get("x-nonce") || "";
+
   return (
     <html lang="en" className="relative">
       <Script

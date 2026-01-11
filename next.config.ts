@@ -10,10 +10,6 @@ const nextConfig: NextConfig = {
             key: "X-Content-Type-Options",
             value: "nosniff",
           },
-          {
-            key: "Content-Security-Policy",
-            value: "frame-ancestors 'self';",
-          },
         ],
       },
     ];
