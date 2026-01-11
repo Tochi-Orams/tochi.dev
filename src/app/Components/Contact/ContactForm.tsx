@@ -8,10 +8,9 @@ import React, {
   useState,
 } from "react";
 import { sendMessage } from "@/app/Server Actions/SendGrid";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PulseLoader } from "react-spinners";
 import { modalStatus } from "@/app/Types/Types";
+import { ChevronDown } from "lucide-react";
 
 const options = [
   "Job Opportunity",
@@ -187,8 +186,7 @@ const ContactForm: FC<props> = ({ props }) => {
           >
             {topic}
           </p>
-          <FontAwesomeIcon
-            icon={faChevronDown}
+          <ChevronDown
             className={`h-4 pb-[1px] pr-2 duration-300 ${
               select ? "rotate-180" : ""
             }`}

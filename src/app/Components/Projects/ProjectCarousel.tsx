@@ -1,11 +1,7 @@
 "use client";
 
 import { projectType } from "@/app/Types/Types";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 
@@ -71,7 +67,7 @@ const ProjectCarousel: FC<props> = ({ projects, sec }) => {
         onClick={prevSlide}
       >
         <div className="text-white/30 hover:!bg-white/30 duration-300 cursor-pointer h-16 w-16 rounded-xl bg-white/0 group-hover:bg-white/15 flex flex-col justify-center items-center">
-          <FontAwesomeIcon icon={faChevronLeft} className="h-10" />
+          <ChevronLeft className="h-10" />
         </div>
       </button>
 
@@ -83,7 +79,7 @@ const ProjectCarousel: FC<props> = ({ projects, sec }) => {
         onClick={nextSlide}
       >
         <div className="text-white/30 hover:!bg-white/30 duration-300 cursor-pointer h-16 w-16 rounded-xl bg-white/0 group-hover:bg-white/15 flex flex-col justify-center items-center">
-          <FontAwesomeIcon icon={faChevronRight} className="h-10" />
+          <ChevronRight className="h-10" />
         </div>
       </button>
 

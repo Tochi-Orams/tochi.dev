@@ -1,7 +1,5 @@
 "use client";
 
-import { faArrowDown, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useHomeSectionContext } from "../../Context/HomeSectionContext";
 import { useSidebarContext } from "../../Context/SidebarContext";
@@ -9,6 +7,7 @@ import { usePageLoadedContext } from "../../Context/PageLoadContext";
 import { usePageContext } from "../../Context/pageContext";
 import { usePlayerOpenContext } from "../../Context/MusicPlayerContext";
 import Sidebar from "../Sidebar";
+import { ArrowDown, Ellipsis } from "lucide-react";
 
 const HeroSection = () => {
   const { currentPage } = usePageContext();
@@ -65,10 +64,7 @@ const HeroSection = () => {
               onClick={() => setSidebar(true)}
               onFocus={() => setPlayerOpen(false)}
             >
-              <FontAwesomeIcon
-                icon={faEllipsisV}
-                className="h-5 object-contain"
-              />
+              <Ellipsis className="h-5 object-contain" />
             </button>
 
             <p className="h4Size font-medium">Hey! I'm</p>
@@ -101,9 +97,8 @@ const HeroSection = () => {
                overflow-hidden"
           >
             <p className="h3Size font-medium mt-6">See My Work</p>
-            <FontAwesomeIcon
-              icon={faArrowDown}
-              className={`mt-8 duration-300 ${
+            <ArrowDown
+              className={`mt-8 duration-300 mx-auto ${
                 showArrow ? "opacity-100 lg:h-10 h-6" : "opacity-0 h-0"
               }`}
             />

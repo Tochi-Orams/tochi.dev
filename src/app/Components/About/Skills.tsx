@@ -1,11 +1,5 @@
 "use client";
 
-import {
-  faArrowLeft,
-  faCode,
-  faPaintBrush,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import {
   creativeSkills,
@@ -13,6 +7,7 @@ import {
   devSkills,
   mobDefault,
 } from "./SkillConstants";
+import { ArrowLeft, Code, Palette } from "lucide-react";
 
 interface props {
   showSkills: boolean;
@@ -90,7 +85,7 @@ const Skills: FC<props> = ({ showSkills, inDOM, setInDOM }) => {
           className="duration-300 rounded-full px-6 h-full flex gap-4 items-center cursor-pointer backdrop-blur-md bg-white/30 hover:bg-white/45"
           onClick={() => setInDOM({ ...inDOM, bio: true })}
         >
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <ArrowLeft />
           <p className="h3Size font-normal mx-auto">Show Bio</p>
         </button>
       </div>
@@ -303,7 +298,7 @@ const MobileSkills: FC<SP> = ({
                 skillType === "dev" ? "mb-6" : ""
               }`}
             >
-              <FontAwesomeIcon icon={faCode} className="w-8 object-contain" />
+              <Code className="w-8 object-contain" />
             </p>
           </button>
           <div
@@ -366,10 +361,7 @@ const MobileSkills: FC<SP> = ({
                 skillType === "creative" ? "mb-6" : ""
               }`}
             >
-              <FontAwesomeIcon
-                icon={faPaintBrush}
-                className="w-8 object-contain"
-              />
+              <Palette className="w-8 object-contain" />
             </p>
           </button>
           <div

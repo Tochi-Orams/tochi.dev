@@ -1,7 +1,6 @@
 "use client";
 
-import { faArrowLeft, faQuestion } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ArrowLeft, CircleQuestionMark } from "lucide-react";
 import { FC, useEffect, useRef, useState } from "react";
 
 interface props {
@@ -176,10 +175,9 @@ export const Overview: FC<props> = ({ displaySection }) => {
         }`}
         onClick={() => setIsEncrypted(!isEncrypted)}
       >
-        <FontAwesomeIcon
-          icon={isEncrypted ? faArrowLeft : faQuestion}
-          className="mx-auto"
-        />
+        <div className="mx-auto">
+          {isEncrypted ? <ArrowLeft /> : <CircleQuestionMark />}{" "}
+        </div>
       </button>
     </div>
   );

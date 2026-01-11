@@ -1,13 +1,13 @@
 "use client";
 
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { usePageContext } from "../Context/pageContext";
 import { useNavOpenContext } from "../Context/NavOpenContext";
 import { usePageLoadedContext } from "../Context/PageLoadContext";
 import { useSidebarContext } from "../Context/SidebarContext";
 import { usePlayerOpenContext } from "../Context/MusicPlayerContext";
+import { Music, Music2 } from "lucide-react";
 
 const MusicPlayer = () => {
   const [projectInfo, setProjectInfo] = useState({ title: "", pic: "" });
@@ -160,16 +160,16 @@ const MusicPlayer = () => {
           onMouseLeave={() => setPlayerOpen(false)}
           onFocus={() => setSidebar(false)}
         >
-          <FontAwesomeIcon
-            icon={faMusic}
-            className={`mx-auto duration-500 ${
+          <div
+            className={`duration-500 aspect-square !h-6 !mx-[18px] ${
               currentPage === "home"
-                ? "lg:h-10 h-6 lg:!mx-8 !mx-[18px]"
-                : playerOpen
-                ? "h-6 !mx-[18px]"
-                : "h-6 !mx-[18px]"
+                ? "lg:!h-10 lg:!w-10 !h-6 !w-6 lg:!mx-[34px] !mx-[18px]"
+                : ""
             }`}
-          />
+          >
+            <Music className="h-full w-full" />
+          </div>
+
           <div
             className={`duration-500 overflow-hidden w-auto ${
               playerOpen ? "w-80 opacity-100" : "w-0 mr-0 opacity-0"

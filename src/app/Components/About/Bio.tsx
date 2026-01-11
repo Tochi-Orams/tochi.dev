@@ -2,12 +2,7 @@
 
 import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import { Education, Hobbies, Overview } from "./BioSections";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const sections = ["Overview", "Education", "Hobbies"];
 
@@ -73,10 +68,7 @@ const Bio: FC<bioProps> = ({
                 setFade(true);
               }}
             >
-              <FontAwesomeIcon
-                icon={faChevronLeft}
-                className="text-white h-4 mx-auto"
-              />
+              <ChevronLeft className="text-white h-4 mx-auto" />
             </button>
             <button
               type="button"
@@ -88,10 +80,7 @@ const Bio: FC<bioProps> = ({
                 setFade(true);
               }}
             >
-              <FontAwesomeIcon
-                icon={faChevronRight}
-                className="text-white h-4 mx-auto"
-              />
+              <ChevronRight className="text-white h-4 mx-auto" />
             </button>
           </div>
         </div>
@@ -128,7 +117,7 @@ const Bio: FC<bioProps> = ({
           onClick={() => setInDOM({ ...inDOM, skills: true })}
         >
           <p className="h3Size font-normal mx-auto">Show Skills</p>
-          <FontAwesomeIcon icon={faArrowRight} />
+          <ArrowRight />
         </button>
       </div>
     </div>

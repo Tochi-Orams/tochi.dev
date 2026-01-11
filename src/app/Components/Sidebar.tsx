@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faCheck, faEnvelope, faX } from "@fortawesome/free-solid-svg-icons";
-import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSidebarContext } from "../Context/SidebarContext";
 import { useHomeSectionContext } from "../Context/HomeSectionContext";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Check, Copy, Mail, X } from "lucide-react";
 
 const links = [
   {
@@ -83,7 +82,7 @@ const Sidebar = () => {
             className="cursor-pointer ml-auto rounded-full bg-white/15 hover:bg-white/30 focus:bg-white/30 w-9 aspect-square flex flex-col justify-center items-center duration-300"
             onClick={() => setSidebar(false)}
           >
-            <FontAwesomeIcon icon={faX} className="object-contain" />
+            <X className="object-contain" />
           </button>
 
           <p className="h2Size border-b-2 border-white text-left p-2 ">
@@ -127,9 +126,7 @@ const Sidebar = () => {
                 <p>tochi.orams@gmail.com</p>
                 <div>
                   <div className="w-fit mx-auto">
-                    <FontAwesomeIcon
-                      icon={copied ? faCheck : (faCopy as IconProp)}
-                    />
+                    {copied ? <Check /> : <Copy />}
                   </div>
                   <p className="text-xs">{copied ? "Copied!" : "Copy"}</p>
                 </div>
@@ -145,7 +142,7 @@ const Sidebar = () => {
                 onFocus={() => setShowEmail(true)}
                 onBlur={() => setShowEmail(false)}
               >
-                <FontAwesomeIcon icon={faEnvelope} className="h-10" />
+                <Mail className="h-10" />
                 <p className="h3Size group-hover:ml-3 duration-300">Email</p>
               </a>
             </div>

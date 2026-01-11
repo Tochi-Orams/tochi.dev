@@ -7,13 +7,9 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 import { useHomeSectionContext } from "../Context/HomeSectionContext";
 import { usePlayerOpenContext } from "../Context/MusicPlayerContext";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const navPages = [
   { id: "home", text: "Home" },
@@ -85,10 +81,11 @@ export const NavArrow: FC<NavArrowProps> = ({ direction, setPeek }) => {
       onClick={direction === "previous" ? previousPage : nextPage}
       onFocus={() => setPlayerOpen(false)}
     >
-      <FontAwesomeIcon
-        icon={direction === "previous" ? faChevronLeft : faChevronRight}
-        className="text-white h-4 mx-auto"
-      />
+      {direction == "previous" ? (
+        <ChevronLeft className="text-white h-4 mx-auto" />
+      ) : (
+        <ChevronRight className="text-white h-4 mx-auto" />
+      )}
     </button>
   );
 };

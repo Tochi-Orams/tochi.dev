@@ -1,8 +1,7 @@
 "use client";
 
 import { projectType } from "@/app/Types/Types";
-import { faDownLeftAndUpRightToCenter } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Shrink } from "lucide-react";
 import {
   Dispatch,
   FC,
@@ -82,10 +81,7 @@ const ProjectType: FC<props> = ({
         }`}
         onClick={() => setOpenSection("")}
       >
-        <FontAwesomeIcon
-          icon={faDownLeftAndUpRightToCenter}
-          className="mx-auto"
-        />
+        <Shrink className="mx-auto" />
       </button>
 
       {openSection && (

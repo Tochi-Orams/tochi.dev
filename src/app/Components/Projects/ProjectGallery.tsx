@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  faChevronLeft,
-  faChevronRight,
-  faX,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { FC, useEffect, useState } from "react";
 
 interface props {
@@ -91,7 +86,7 @@ const ProjectGallery: FC<props> = ({ pictures }) => {
             className="rounded-full lg:flex hidden p-4 ml-4 flex-col items-center justify-center bg-white/15 hover:bg-white/30 duration-300 z-50 cursor-pointer"
             onClick={() => setPic(pic > 0 ? pic - 1 : pictures.length - 1)}
           >
-            <FontAwesomeIcon icon={faChevronLeft} className="h-4 w-4" />
+            <ChevronLeft className="h-4 w-4" />
           </button>
 
           <div className="lg:w-[80%] w-[95%] h-full mx-auto relative overflow-clip">
@@ -112,7 +107,7 @@ const ProjectGallery: FC<props> = ({ pictures }) => {
             className="rounded-full lg:flex hidden p-4 mr-4 flex-col items-center justify-center bg-white/15 hover:bg-white/30 duration-300 z-50 cursor-pointer"
             onClick={() => setPic(pic < pictures.length - 1 ? pic + 1 : 0)}
           >
-            <FontAwesomeIcon icon={faChevronRight} className="h-4 w-4" />
+            <ChevronRight className="h-4 w-4" />
           </button>
         </div>
 
@@ -126,7 +121,7 @@ const ProjectGallery: FC<props> = ({ pictures }) => {
             className="rounded-full w-fit p-4 ml-4 lg:hidden flex flex-col items-center justify-center bg-white/15 hover:bg-white/30 duration-300 z-50 cursor-pointer"
             onClick={() => setPic(pic > 0 ? pic - 1 : pictures.length - 1)}
           >
-            <FontAwesomeIcon icon={faChevronLeft} className="h-4 w-4" />
+            <ChevronLeft className="h-4 w-4" />
           </button>
 
           {/* Expand Button */}
@@ -163,7 +158,7 @@ const ProjectGallery: FC<props> = ({ pictures }) => {
             className="rounded-full w-fit p-4 mr-4 flex lg:hidden flex-col items-center justify-center bg-white/15 hover:bg-white/30 duration-300 z-50 cursor-pointer"
             onClick={() => setPic(pic < pictures.length - 1 ? pic + 1 : 0)}
           >
-            <FontAwesomeIcon icon={faChevronRight} className="h-4 w-4" />
+            <ChevronRight className="h-4 w-4" />
           </button>
         </div>
       </div>
@@ -185,7 +180,7 @@ const ProjectGallery: FC<props> = ({ pictures }) => {
               className="cursor-pointer absolute sm:top-4 sm:left-4 left-2 top-2 flex flex-col duration-300 justify-center items-center p-2 bg-white/30 hover:bg-white/45 rounded-full"
               onClick={() => setExpand(false)}
             >
-              <FontAwesomeIcon icon={faX} className="sm:h-4 sm:w-4 h-3 w-3" />
+              <X className="sm:h-4 sm:w-4 h-3 w-3" />
             </button>
             <div className="flex gap-4 justify-center w-[90%] flex-wrap">
               {pictures.map((pic, i) => (

@@ -1,7 +1,6 @@
 "use client";
 
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ArrowUpRightFromSquare } from "lucide-react";
 import { Dispatch, FC, SetStateAction } from "react";
 
 interface linkProps {
@@ -17,10 +16,7 @@ export const SiteLink: FC<linkProps> = ({ props }) => {
     <a href={link} target="_blank" className="duration-300 group p-1">
       <div className="bg-white/15 sm:px-4 px-2 py-1 flex gap-3 hover:bg-white/30 cursor-pointer duration-300 text-nowrap rounded-lg group-focus:outline">
         <p className="sm:block hidden">Visit Site</p>
-        <FontAwesomeIcon
-          icon={faArrowUpRightFromSquare}
-          className="h-3 opacity-60 sm:pt-1 max-sm:py-1"
-        />
+        <ArrowUpRightFromSquare className="h-3 opacity-60 sm:pt-1 max-sm:py-1" />
       </div>
     </a>
   );
